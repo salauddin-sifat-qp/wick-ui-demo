@@ -318,8 +318,6 @@ const SurveyForm = () => {
             </WuButton>
           </div>
         </form>
-
-        <main style={{ padding: "20px" }}></main>
       </div>
     </>
   );

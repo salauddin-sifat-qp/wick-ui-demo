@@ -1,3 +1,17 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+/*? this will effect font family
+
+* {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+}
+  
+*/
+body {
+  /* this will not effect font family */
+  font-family: Arial, Helvetica, sans-serif;
+}
