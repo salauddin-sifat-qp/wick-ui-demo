@@ -7,10 +7,11 @@
 
 ## Form Fields
 
-- [x] Fix icon
+- [x] ~~Fix icon~~
 - [ ] Add optional label for WuRadio, WuStepper, WuSelect, stepper
 - [ ] Add label component
 - [ ] Type submit design
+- [ ] Cursor error for file type input
 
 ## Modal
 
@@ -24,3 +25,4 @@
 - [ ] WuButton add type submit
 - [ ] Make the package tree shake-able
 - [ ] Make proper docs, use jsdocs
+- [ ] Fix error in toast
