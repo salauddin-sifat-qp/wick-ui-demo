@@ -17,13 +17,23 @@ import {
   WuToggle,
   WuTooltip,
 } from "@npm-questionpro/wick-ui-lib";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { MockProducts } from "./assets/mockApi";
 
+type IFormData = {
+  name: string;
+  email: string;
+  framework: string;
+  experience: string;
+  features: string[];
+  satisfaction: number;
+  comments: string;
+  screenshot: File | null;
+};
 const SurveyForm = () => {
   const { showToast } = useWuShowToast();
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<IFormData>({
     name: "",
     email: "",
     framework: "",
@@ -34,24 +44,11 @@ const SurveyForm = () => {
     screenshot: null,
   });
 
-  const handleChange = (e) => {
-    const { name, value, type, checked, files } = e.target;
-
-    if (type === "checkbox") {
-      setFormData((prevData) => {
-        const newFeatures = checked
-          ? [...prevData.features, value]
-          : prevData.features.filter((feature) => feature !== value);
-        return { ...prevData, features: newFeatures };
-      });
-    } else if (type === "file") {
-      setFormData({ ...formData, [name]: files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
+  const handleChange = (e: unknown) => {
+    console.log(e);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     console.log("Form Submitted", formData);
   };
@@ -181,7 +178,6 @@ const SurveyForm = () => {
         }}
       >
         <form
-          onSubmit={handleSubmit}
           style={{
             width: "50%",
             display: "flex",
@@ -193,6 +189,7 @@ const SurveyForm = () => {
             label="Your Name"
             placeholder="Enter your name"
             name="name"
+            onChange={handleChange}
           />
 
           <WuInput
@@ -314,7 +311,7 @@ const SurveyForm = () => {
           {/* Submit and Reset buttons */}
           <div style={{ display: "flex", gap: "8px" }}>
             <WuTooltip content="This is a button">
-              <WuButton>Submit Survey</WuButton>
+              <WuButton onClick={handleSubmit}>Submit Survey</WuButton>
             </WuTooltip>
             <WuButton onClick={handleReset} variant="outline" loading={loading}>
               Reset Form
