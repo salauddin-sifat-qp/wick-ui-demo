@@ -27,3 +27,27 @@ export const MockProducts: IWuAppHeaderProps["catagories"] = [
 export const DefaultFormData: IFormData = {
   name: "Sheldon Cooper",
 };
+
+export const JSFrameworks = [
+  { label: "React", value: "react" },
+  { label: "Vue.js", value: "vue" },
+  { label: "Angular", value: "angular" },
+  { label: "Svelte", value: "svelte" },
+  { label: "Next.js", value: "nextjs" },
+  { label: "Nuxt.js", value: "nuxtjs" },
+  { label: "Gatsby", value: "gatsby" },
+  { label: "Ember.js", value: "ember" },
+  { label: "Backbone.js", value: "backbone" },
+  { label: "Meteor", value: "meteor" },
+  { label: "Preact", value: "preact" },
+  { label: "Alpine.js", value: "alpinejs" },
+  { label: "Express.js", value: "express" },
+  { label: "NestJS", value: "nestjs" },
+  { label: "Electron", value: "electron" },
+  { label: "Ionic", value: "ionic" },
+  { label: "Quasar", value: "quasar" },
+  { label: "Redux", value: "redux" },
+  { label: "Mithril", value: "mithril" },
+  { label: "Aurelia", value: "aurelia" },
+  { label: "Stencil", value: "stencil" },
+];

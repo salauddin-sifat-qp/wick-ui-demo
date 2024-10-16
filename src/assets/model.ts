@@ -10,6 +10,7 @@ export type IFormData = {
   comments?: string;
   screenshot?: File;
   secret?: string;
+  usedFrameworks?: string[];
 };
 
 export type IFormDataTypes = string | number | File | undefined | string[];
