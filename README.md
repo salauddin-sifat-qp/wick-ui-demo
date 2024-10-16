@@ -16,6 +16,7 @@
 - [ ] add prevent default for stepper, password buttons
 - [ ] name for WuRadio
 - [ ] fix disabled label WuRadio
+- [ ] fix disabled label,border WuCheckbox
 
 ## Modal
 
