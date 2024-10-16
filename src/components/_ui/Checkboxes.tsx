@@ -10,6 +10,7 @@ export const Checkboxes: React.FC<IFormControls> = (props) => {
     { label: "Strong Community Support", value: "community" },
     { label: "Comprehensive Documentation", value: "documentation" },
   ];
+
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
       <label>
@@ -21,7 +22,13 @@ export const Checkboxes: React.FC<IFormControls> = (props) => {
           label={checkbox.label}
           id={checkbox.value}
           checked={formData.features?.includes(checkbox.value)}
-          onChange={handleChange}
+          onChange={() =>
+            handleChange({
+              key: "features",
+              value: checkbox.value,
+              type: "checkbox",
+            })
+          }
         />
       ))}
     </div>

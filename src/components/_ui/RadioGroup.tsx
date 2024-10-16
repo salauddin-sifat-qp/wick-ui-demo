@@ -17,7 +17,7 @@ export const RadioGroup: React.FC<IFormControls> = (props) => {
         ]}
         defaultValue={formData.framework}
         id="framework"
-        onChange={(e) => handleChange("framework", e)}
+        onChange={(e) => handleChange({ key: "framework", value: e })}
       />
     </div>
   );

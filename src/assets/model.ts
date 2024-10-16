@@ -1,3 +1,5 @@
+import { InputHTMLAttributes } from "react";
+
 export type IFormData = {
   name?: string;
   email?: string;
@@ -10,8 +12,13 @@ export type IFormData = {
   secret?: string;
 };
 
-export type IFormDataTypes = string | number | boolean | File | null;
+export type IFormDataTypes = string | number | File | undefined | string[];
+export type IFormHandle = {
+  key: keyof IFormData;
+  value: IFormDataTypes;
+  type?: InputHTMLAttributes<HTMLInputElement>["type"];
+};
 export type IFormControls = {
-  handleChange: (key: keyof IFormData, value?: IFormDataTypes) => void;
+  handleChange: (e: IFormHandle) => void;
   formData: IFormData;
 };

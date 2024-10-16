@@ -1,7 +1,7 @@
 import { useWuShowToast } from "@npm-questionpro/wick-ui-lib";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { DefaultFormData } from "../assets/mockApi";
-import { IFormData, IFormDataTypes } from "../assets/model";
+import { IFormData, IFormHandle } from "../assets/model";
 import { Checkboxes } from "./_ui/Checkboxes";
 import { Footer } from "./_ui/Footer";
 import { MiscInputs } from "./_ui/MiscInputs";
@@ -14,10 +14,27 @@ export const Form = () => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<IFormData>(DefaultFormData);
 
-  const handleChange = (key: string, value?: IFormDataTypes) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
-    console.log({ value, key });
+  const handleChange = (data: IFormHandle) => {
+    const { key, value, type } = data;
+
+    if (type === "checkbox") {
+      let temp = (formData[key] ?? []) as string[];
+
+      if (temp.includes(value as string)) {
+        temp = temp.filter((item) => item !== value);
+      } else {
+        temp.push(value as string);
+      }
+      setFormData((prevData) => ({ ...prevData, [key]: temp }));
+      return;
+    }
+
+    setFormData((prevData) => ({ ...prevData, [key]: value }));
   };
+
+  useEffect(() => {
+    console.log("Form Data:", formData);
+  }, [formData]);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();

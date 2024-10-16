@@ -1,9 +1,12 @@
 import { WuInput, WuTextarea } from "@npm-questionpro/wick-ui-lib";
 import React from "react";
-import { IFormControls } from "../../assets/model";
+import { IFormControls, IFormData, IFormDataTypes } from "../../assets/model";
 
 export const TextInputs: React.FC<IFormControls> = (props) => {
   const { handleChange, formData } = props;
+  const handleTextChange = (key: keyof IFormData, value: IFormDataTypes) => {
+    handleChange({ key, value });
+  };
   return (
     <>
       <div
@@ -14,7 +17,7 @@ export const TextInputs: React.FC<IFormControls> = (props) => {
           placeholder="Enter your name"
           name="name"
           id="name"
-          onChange={(e) => handleChange("name", e.target.value)}
+          onChange={(e) => handleTextChange("name", e.target.value)}
           value={formData.name}
           required
         />
@@ -24,7 +27,7 @@ export const TextInputs: React.FC<IFormControls> = (props) => {
           placeholder="Enter your secret"
           name="secret"
           id="secret"
-          onChange={(e) => handleChange("secret", e.target.value)}
+          onChange={(e) => handleTextChange("secret", e.target.value)}
           value={formData.secret}
         />
       </div>
@@ -35,7 +38,7 @@ export const TextInputs: React.FC<IFormControls> = (props) => {
         name="email"
         type="email"
         icon="mail"
-        onChange={(e) => handleChange("email", e.target.value)}
+        onChange={(e) => handleTextChange("email", e.target.value)}
         value={formData.email}
       />
 
@@ -46,7 +49,7 @@ export const TextInputs: React.FC<IFormControls> = (props) => {
         label="Comments"
         maxLength={100}
         minLength={10}
-        onChange={(e) => handleChange("comments", e.target.value)}
+        onChange={(e) => handleTextChange("comments", e.target.value)}
         value={formData.comments}
       />
 
@@ -55,7 +58,7 @@ export const TextInputs: React.FC<IFormControls> = (props) => {
         id="screenshot"
         name="screenshot"
         label="Upload a screenshot of your project (optional):"
-        onChange={(e) => handleChange("screenshot", e.target.files?.[0])}
+        onChange={(e) => handleTextChange("screenshot", e.target.files?.[0])}
       />
     </>
   );
