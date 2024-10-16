@@ -9,13 +9,15 @@ export const RadioGroup: React.FC<IFormControls> = (props) => {
       <label>Which framework do you think is the best?</label>
       <WuRadio
         options={[
-          { label: "React", value: "react" },
-          { label: "Vue", value: "vue" },
           { label: "Angular", value: "angular" },
+          { label: "EmberJs", value: "emberjs", disabled: true },
+          { label: "React", value: "react" },
           { label: "Svelte", value: "svelte" },
+          { label: "Vue", value: "vue" },
         ]}
-        defaultValue="svelte"
+        defaultValue={formData.framework}
         id="framework"
+        onChange={(e) => handleChange("framework", e)}
       />
     </div>
   );

@@ -13,6 +13,9 @@
 - [ ] Type submit design
 - [ ] Cursor error for file type input
 - [ ] Fix file type input value
+- [ ] add prevent default for stepper, password buttons
+- [ ] name for WuRadio
+- [ ] fix disabled label WuRadio
 
 ## Modal
 
