@@ -12,6 +12,7 @@
 - [ ] Add label component
 - [ ] Type submit design
 - [ ] Cursor error for file type input
+- [ ] Fix file type input value
 
 ## Modal
 

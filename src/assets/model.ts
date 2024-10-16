@@ -6,10 +6,12 @@ export type IFormData = {
   features?: string[];
   satisfaction?: number;
   comments?: string;
-  screenshot?: File | null;
+  screenshot?: File;
+  secret?: string;
 };
 
+export type IFormDataTypes = string | number | boolean | File | null;
 export type IFormControls = {
-  handleChange: (e: unknown) => void;
+  handleChange: (key: keyof IFormData, value?: IFormDataTypes) => void;
   formData: IFormData;
 };

@@ -1,4 +1,5 @@
 import { IWuAppHeaderProps } from "@npm-questionpro/wick-ui-lib";
+import { IFormData } from "./model";
 
 export const MockProducts: IWuAppHeaderProps["catagories"] = [
   {
@@ -22,3 +23,7 @@ export const MockProducts: IWuAppHeaderProps["catagories"] = [
     desc: "This is a demo product",
   },
 ];
+
+export const DefaultFormData: IFormData = {
+  name: "Sheldon Cooper",
+};
