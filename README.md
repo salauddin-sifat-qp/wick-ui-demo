@@ -2,13 +2,13 @@
 
 ## App Header
 
-- [x] Make desc in category as optional
-- [x] Height of image fixed
+- [x] ~~Make desc in category as optional~~
+- [x] ~~Height of image fixed~~
 
 ## Form Fields
 
 - [x] ~~Fix icon~~
-- [x] Add optional label for WuRadio, WuStepper, WuSelect, stepper
+- [x] ~~Add optional label for WuRadio, WuStepper, WuSelect, stepper~~
 - [ ] Select Variant
 - [ ] Add label component
 - [ ] Type submit design

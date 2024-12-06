@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@npm-questionpro/wick-ui-lib':
-        specifier: ^0.2.3
-        version: 0.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.4.1
+        version: 0.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -363,8 +363,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@npm-questionpro/wick-ui-lib@0.2.3':
-    resolution: {integrity: sha512-NKkQT15Kdwn2+VPW3dhU11Ox/06PWcbB9PdCWCEEg70B4S7uFu8Ru5cdJF2nKkhGr5KFY03BAXovD/LMgt450g==}
+  '@npm-questionpro/wick-ui-lib@0.4.1':
+    resolution: {integrity: sha512-oR8/QDhxoHE5PomSEulalZmUaPAn9mY35DuCwmmex//KyHIgnpTLT+SMXru0s22IWryjRheQBChUH7RhrJOQWw==}
     peerDependencies:
       react: ^18.3.1
       react-dom: ^18.3.1
@@ -1370,7 +1370,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@npm-questionpro/wick-ui-lib@0.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@npm-questionpro/wick-ui-lib@0.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)

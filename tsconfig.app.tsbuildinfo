@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/assets/mockApi.ts"],"version":"5.6.3"}
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/assets/mockApi.ts","./src/assets/model.ts","./src/components/Form.tsx","./src/components/License.tsx","./src/components/_ui/Checkboxes.tsx","./src/components/_ui/Footer.tsx","./src/components/_ui/MiscInputs.tsx","./src/components/_ui/RadioGroup.tsx","./src/components/_ui/SelectInput.tsx","./src/components/_ui/TextInputs.tsx"],"errors":true,"version":"5.6.3"}
